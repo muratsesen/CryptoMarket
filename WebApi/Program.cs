@@ -2,6 +2,7 @@ using Infrastructure;
 using Application;
 using WebApi.Middlewares;
 using WebApi;
+using WebApi.HostedServices;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,7 +24,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// builder.Services.AddHostedService<MyBackgroundService>();
+ builder.Services.AddHostedService<MyBackgroundService>();
 // builder.Services.AddHostedService<MyHostedService>();
 
 var app = builder.Build();
