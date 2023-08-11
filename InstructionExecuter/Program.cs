@@ -24,6 +24,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>options.UseSqlite(
 
 
 builder.Services.AddTransient<IInstructionRepo, InstructionRepo>();
+builder.Services.AddTransient<INotificationRepo, NotificationRepo>();
 
 builder.Services.AddHangfire(config => config.UseMemoryStorage());
 builder.Services.AddHangfireServer();
