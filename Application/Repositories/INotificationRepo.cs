@@ -9,5 +9,6 @@ namespace Application.Repositories
         Task<List<Notification>> GetAllAsync();
         Task UpdateAsync(Notification instruction);
         Task<Notification> GetByIdAsync(int id);
+        Task<List<SendNotificaitonDto>> GetByInstructionIdAsync(int id);
     }
 }
